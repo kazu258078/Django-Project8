@@ -1,47 +1,22 @@
 {% extends 'base.html' %}
 
-
 {% block content %}
 <h2 style="text-align: center">{{ search | title }}</h2>
 <div class="row">
+        {% for post in posts %}
             <div class="col s4">
                 <div class="card">
                     <div class="card-image">
-                        <a href="#"><img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*" alt=""></a>
+                        <a href="{{post.1}}"><img src="{{post.3}}" alt=""></a>
                     </div>
                     <div class="card-content">
-                        <p>#</p>
+                        <p>{{post.0}}</p>
                     </div>
                     <div class="card-action">
-                        <a href="#">View listing: Price #</a>
+                        <a href="{{post.1}}">View listing: Price {{post.2}}</a>
                     </div>
                 </div>
             </div>
-            <div class="col s4">
-                <div class="card">
-                    <div class="card-image">
-                        <a href="#"><img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*" alt=""></a>
-                    </div>
-                    <div class="card-content">
-                        <p>#</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">View listing: Price #</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4">
-                <div class="card">
-                    <div class="card-image">
-                        <a href="#"><img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*" alt=""></a>
-                    </div>
-                    <div class="card-content">
-                        <p>#</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">View listing: Price #</a>
-                    </div>
-                </div>
-            </div>
+        {% endfor %}
     </div>
 {% endblock content %}
