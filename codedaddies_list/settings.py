@@ -23,9 +23,9 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = '*6k9)3=l=^3sel4g7p)l&3jd8ev^$&z1u(q3m!+4$4#8a#6e%z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-project8.herokuapp.com/', 'localhost:8000/']
 
 
 # Application definition
@@ -122,5 +122,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS =[
     os.path.join(BASE_DIR, 'static')
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-import django_heroku
+
+# import django_heroku
+# django_heroku.settings(locals())
+
